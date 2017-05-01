@@ -1,0 +1,423 @@
+/* jQuery Mobile structure CSS overrides */
+
+.ui-mobile,
+.ui-mobile body,
+.ui-mobile .ui-page {
+	height: 100%;
+	overflow: hidden;
+}
+
+.ui-toolbar-header,
+.ui-toolbar-footer {
+	border: 0;
+}
+
+.ui-content {
+	padding: 16px;
+}
+
+/* Buttons */
+
+.simon-button.ui-button.ui-button-inherit {
+	background: none;
+	border: 0;
+	margin: 0;
+	padding: 8px;
+	text-align: left;
+	transition: color 150ms ease-out;
+}
+
+.simon-button-text {
+	line-height: 24px;
+	font-size: 14px;
+	text-transform: uppercase;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.simon-button-icon {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 8px;
+}
+
+.simon-button-icon > svg {
+	display: block;
+	fill: currentColor;
+	height: 24px;
+	width: 24px;
+}
+
+.simon-button-icononly.ui-button.ui-button-inherit {
+	border: 0;
+	padding: 0;
+	background: none;
+	border-radius: 0;
+	color: inherit;
+	height: 32px;
+	line-height: 1;
+	margin: 0;
+	width: 32px;
+	cursor: pointer;
+	transition: color 150ms ease-out;
+}
+
+.simon-button-textonly.ui-button.ui-button-inherit {
+	background: none;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	margin-left: 24px; /* TODO move to grid CSS */
+	text-transform: uppercase;
+	transition: color 150ms ease-out;
+}
+
+.ui-button.simon-button-icononly:hover,
+.ui-button.simon-button-icononly:focus,
+.ui-button.simon-button-textonly:hover,
+.ui-button.simon-button-textonly:focus {
+	color: #41a9d0;
+}
+
+.simon-button-textonly:focus,
+.simon-button-icononly:focus {
+	outline: 0;
+}
+
+.simon-button-textonly:disabled,
+.simon-button-icononly:disabled {
+	cursor: default;
+}
+
+.simon-button-icononly-icon {
+	fill: currentColor;
+	height: inherit;
+	width: inherit;
+}
+
+/* Checkbox icon */
+
+.ui-checkboxradio-label .ui-icon.ui-checkboxradio-icon {
+	height: 24px;
+	width: 24px;
+	margin: 0;
+	border-radius: 0;
+	opacity: 1;
+}
+
+.ui-button.ui-checkboxradio-label.ui-checkboxradio-checked .ui-checkboxradio-icon.ui-icon-check {
+	background: url('images/checkbox-checked.svg') no-repeat;
+}
+
+.ui-button.ui-checkboxradio-label .ui-checkboxradio-icon {
+	background: url('images/checkbox.svg') no-repeat;
+}
+
+/* Text input focus style */
+.ui-textinput.ui-focus {
+	box-shadow: inset 0 0 1px #41a9d0;
+	border-color: #41a9d0;
+}
+
+.ui-textinput.error {
+	border-color: red !important;
+}
+
+/* Select dropdown icon (base64 to make it work on IE) */
+.ui-selectmenu-button-icon.ui-icon-caret-d.ui-icon {
+	background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9IiM5OTkiIGhlaWdodD0iMjQiIHdpZHRoPSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNNyAxMGw1IDUgNS01eiIvPjwvc3ZnPg==');
+	background-size: 24px;
+}
+
+.ui-button-active .ui-selectmenu-button-icon.ui-icon-caret-d.ui-icon {
+	background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9IiNmZmYiIGhlaWdodD0iMjQiIHdpZHRoPSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNNyAxMGw1IDUgNS01eiIvPjwvc3ZnPg==');
+}
+
+/* Datepicker */
+
+.ui-datepicker {
+	background: #fff;
+	border-radius: 2px;
+	box-shadow: 0 0 10px #000;
+	padding: 8px 8px 4px;
+	margin-top: 4px;
+	z-index: 9999 !important;
+}
+
+.simon-datepicker-close-button {
+	position: absolute;
+	top: 4px;
+	right: 4px;
+}
+
+.ui-datepicker-header {
+	position: relative;
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next,
+.ui-datepicker .ui-datepicker-next-hover {
+	cursor: pointer;
+	position: absolute;
+	top: 4px;
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-prev-hover {
+	left: 4px;
+}
+
+.ui-datepicker .ui-datepicker-next,
+.ui-datepicker .ui-datepicker-next-hover {
+	right: 4px;
+}
+
+.ui-datepicker .ui-datepicker-prev:after,
+.ui-datepicker .ui-datepicker-next:after {
+	left: 50%;
+	margin-left: -15px;
+	top: 50%;
+	margin-top: -10px;
+	content: "";
+	position: absolute;
+	display: block;
+	width: 32px;
+	height: 32px;
+	background-color: rgba(0,0,0,.3) /*{global-icon-disc}*/;
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+}
+.ui-datepicker .ui-datepicker-next:after{
+	background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20width%3D%2214px%22%20height%3D%2214px%22%20viewBox%3D%220%200%2014%2014%22%20style%3D%22enable-background%3Anew%200%200%2014%2014%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20fill%3D%22%23FFF%22%20points%3D%2214%2C7%207%2C0%207%2C5%200%2C5%200%2C9%207%2C9%207%2C14%20%22%2F%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+.ui-datepicker .ui-datepicker-prev:after{
+	background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20width%3D%2214px%22%20height%3D%2214px%22%20viewBox%3D%220%200%2014%2014%22%20style%3D%22enable-background%3Anew%200%200%2014%2014%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20fill%3D%22%23FFF%22%20points%3D%227%2C5%207%2C0%200%2C7%207%2C14%207%2C9%2014%2C9%2014%2C5%20%22%2F%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+/*
+.ui-icon-circle-triangle-w {
+	background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="%23999" xmlns="http://www.w3.org/2000/svg"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>');
+}
+.ui-icon-circle-triangle-e {
+	background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="%23999" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>');
+}*/
+
+.ui-datepicker-title {
+	padding: 4px;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.ui-datepicker-calendar {
+	border-collapse: collapse;
+	font-size: 14px;
+	table-layout: fixed;
+}
+
+.ui-datepicker-calendar th {
+	color: #999;
+	font-weight: 400;
+}
+
+.ui-datepicker-calendar td {
+	background: #f5f5f5;
+	border: 2px solid #fff;
+    text-align: center;
+}
+
+.ui-datepicker-calendar td.ui-datepicker-today {
+	background: #e5e5e5;
+}
+
+.ui-datepicker-calendar td .ui-state-active {
+	background: #41a9d0;
+	color: #fff;
+}
+
+.ui-datepicker-calendar td.ui-datepicker-unselectable {
+	background: #fff;
+}
+
+.ui-datepicker-calendar td a {
+	color: inherit;
+	display: block;
+	font-weight: 700;
+	padding: 8px;
+	text-decoration: none;
+}
+
+.ui_tpicker_hour_slider,
+.ui_tpicker_minute_slider {
+	background: #eee;
+}
+
+.ui-timepicker-div .ui_tpicker_hour {
+	margin-bottom: 20px;
+}
+
+.ui_tpicker_time_label,
+.ui_tpicker_hour_label,
+.ui_tpicker_minute_label {
+	font-size: 14px;
+}
+
+.ui-slider-handle {
+	border: 1px solid #ddd;
+	background: #fff;
+}
+
+/* Toolbars */
+
+.ui-toolbar-header,
+.ui-toolbar-footer {
+	border: 0;
+	height: 40px;
+}
+
+.ui-toolbar-header .ui-toolbar-title {
+	margin: 0 48px;
+}
+
+.ui-toolbar-header-button-left,
+.ui-toolbar-header-button-right {
+	top: 4px;
+}
+
+.ui-toolbar-header-button-left {
+	left: 8px;
+}
+
+.ui-toolbar-header-button-right {
+	right: 8px;
+}
+
+.ui-toolbar-header .ui-button.simon-button-icononly,
+.ui-toolbar-header .simon-button-icononly {
+	background: none;
+	color: #fff;
+}
+
+.ui-toolbar-header .ui-button.simon-button-icononly .simon-button-icononly-icon,
+.ui-toolbar-header .simon-button-icononly .simon-button-icononly-icon {
+	fill: #fff;
+}
+
+/* Popups */
+
+.ui-popup.ui-body-inherit {
+	border: 0;
+	max-height: 80vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.simon-popup-close-button {
+	position: absolute;
+	top: 4px;
+	right: 4px;
+}
+@media only screen and (min-device-width : 1080px) {
+    .simon-popup-close-button {
+        /* desktop scroll is thicker */
+        right: 1em;
+    }
+}
+
+.simon-grid-settings-list {
+    max-height: 60vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Panel menu */
+
+.simon-panel-menu {
+	padding: 16px 0;
+	margin: 0;
+	list-style: none;
+}
+
+.simon-panel-menu li {
+	padding: 16px 0;
+	border-bottom: 1px solid #ddd;
+}
+
+.simon-panel-menu a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/*hide the spin on number. Key: 80*/
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/*remove the red highlight when the it doesn't contain '@'. Key: 80 */
+input[type=email] {
+    box-shadow:none;
+}
+
+.ui-datepicker select.ui-datepicker-month, 
+.ui-datepicker select.ui-datepicker-year
+{
+    width: 40%;
+    height: 2.5em;
+    line-height: 2.5em;
+    border: 1px solid rgba(0,0,0,.3); 
+    -webkit-border-radius: 4px;
+	border-radius: 4px;
+    margin-right: 4px;
+}
+
+.ui-datepicker-current, 
+.ui-datepicker-close {
+    background: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    transition: color 150ms ease-out;
+    font-weight: bold;
+}
+
+.ui-datepicker-current:focus, 
+.ui-datepicker-current:hover, 
+.ui-datepicker-close:focus,
+.ui-datepicker-close:hover{
+    color: #41a9d0;
+    outline: 0;
+}
+
+.read-more-button {
+	cursor: pointer;
+    text-align: center;
+}
+
+.simon-read-more-icon {
+    padding-right:16px; 
+    padding-top: 16px;
+    display:inline-block;
+	background-image: url('../css/images/plus.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.simon-read-less-icon {
+    padding-right:16px; 
+    padding-top: 16px;
+    display:inline-block;
+	background-image: url('../css/images/min.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+}
